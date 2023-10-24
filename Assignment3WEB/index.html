@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>               
+<body>
+   
+
+
+  <div class="container">
+    <h2 class="text-center">To-Do List</h2>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Add a new task" id="taskInput">
+        <div class="input-group-append">
+            <button class="btn btn-primary" id="addTaskBtn">Add</button>
+        </div>
+    </div>
+    <ul class="list-group" id="taskList"></ul>
+</div>
+<div class="container mt-5">
+  <h2 class="text-center">Sample Form</h2>
+  <form id="sampleForm">
+      <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+          <div class="invalid-feedback">Username is required.</div>
+      </div>
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+          <div class="invalid-feedback">Valid email is required.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div class="container mt-5">
+  <h2 class="text-center">Countdown Timer</h2>
+  <div class="input-group mb-3">
+      <input type="number" class="form-control" placeholder="Enter duration in seconds" id="timerInput">
+      <div class="input-group-append">
+          <button class="btn btn-primary" id="startTimerBtn">Start Timer</button>
+      </div>
+  </div>
+  <div class="text-center">
+      <div class="timer-display" id="timerDisplay">0:00</div>
+  </div>
+</div>
+<div class="container mt-5">
+  <h2 class="text-center">Interactive Tabs</h2>
+  <ul class="nav nav-tabs" id="interactiveTabs" role="tablist">
+      <li class="nav-item">
+          <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a>
+      </li>
+  </ul>
+  <div class="tab-content" id="interactiveTabsContent">
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">Content for Tab 1</div>
+      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">Content for Tab 2</div>
+      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">Content for Tab 3</div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="text-center">Interactive Accordion</h2>
+  <div class="accordion" id="interactiveAccordion">
+      <div class="card">
+          <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Accordion Item #1
+                  </button>
+              </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#interactiveAccordion">
+              <div class="card-body">
+                  Lionel Messi
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Accordion Item #2
+                  </button>
+              </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#interactiveAccordion">
+              <div class="card-body">
+                  Cristiano Ronaldo
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Accordion Item #3
+                  </button>
+              </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#interactiveAccordion">
+              <div class="card-body">
+                  Neymar JR
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <h2 class="text-center">User Feedback</h2>
+  <div class="text-center">
+      <button class="btn btn-primary" id="feedbackBtn">Click for Feedback</button>
+  </div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="scripts.js"></script>
+ 
+
+
+</body>
+</html>
